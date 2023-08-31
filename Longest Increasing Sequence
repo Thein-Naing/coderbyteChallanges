@@ -11,11 +11,10 @@ Output: 1
 Input: [10, 22, 9, 33, 21, 50, 41, 60, 22, 68, 90]
 Output: 7
 
+// This is not my solution. I think my solution in interview is a lot similar to below solution but my one is a naive solution and may be correct.
 
 
-
-// Dynamic Programming Javascript implementation
-// of LIS problem
+// Dynamic Programming Javascript implementation of LIS problem
 
 // lis() returns the length of the longest
 // increasing subsequence in arr[] of size n
