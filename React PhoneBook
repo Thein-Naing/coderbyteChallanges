@@ -59,7 +59,7 @@ function PhoneBookForm({ addEntryToPhoneBook }) {
   return (
     
     <form onSubmit={handleSubmit} style={style.form.container}>
-      <label>First name:First Name</label>
+      <label>First name:</label>
       <br />
       <input 
         style={style.form.inputs}
@@ -70,7 +70,7 @@ function PhoneBookForm({ addEntryToPhoneBook }) {
         value={userFirstName}
       />
       <br/>
-      <label>Last name:Last Name</label>
+      <label>Last name:</label>
       <br />
       <input 
         style={style.form.inputs}
@@ -81,7 +81,7 @@ function PhoneBookForm({ addEntryToPhoneBook }) {
         value={userLastName}
       />
       <br />
-      <label>Phone: Phone Number</label>
+      <label>Phone:</label>
       <br />
       <input
         style={style.form.inputs}
