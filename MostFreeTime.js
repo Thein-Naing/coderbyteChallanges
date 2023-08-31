@@ -29,10 +29,10 @@ const MostFreeTime = (strArr) => {
   const  ParseTime = (time) => {
       let minutes = 0 
    
-      // 3A.Calculate for PM times
+      // 3A.Calculate for PM hours
       // 3B.use regex string.mtach(regex) method   
       if(time.match(/pm/i)) {  //The regular expression includes the i flag so that upper/lower case differences will be ignored.
-          minutes += 12 * 60  // if time is pm times, minutes = minutes + ( 12 * 6)
+          minutes += 12 * 60  // if time is PM times, minutes = minutes + ( 12 * 6)
       }
       // 4. Calculate for AM hours and add the hours converted to minutes   
       if(time.split(':')[0] !== '12') { // 11:59AM.split(:)[0] and here [0] = 11  time =[11, 59]
