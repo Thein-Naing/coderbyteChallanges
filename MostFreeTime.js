@@ -37,6 +37,8 @@ const MostFreeTime = (strArr) => {
       }  
       // 5.add the minutes
       minutes += Number(time.split(':')[1].match(/[0-9][0-9]/)[0]) // here [1] = 59 of time[11]
+
+   //5A. return minutes
       return minutes
   }
 
@@ -49,10 +51,11 @@ const MostFreeTime = (strArr) => {
       minArr.push([ParseTime(time1), ParseTime(time2)])
   }    
   
-//   // 7.sort the array of minutes in ascending order
-//   minArr.sort(function(a, b) {
-//       return a[0] - b[0]
-//   })
+  // 7.sort the array of minutes in ascending order
+ //7A. You can skip this step if you want.
+  minArr.sort(function(a, b) {
+      return a[0] - b[0]
+  })
   
   // 8.loop through the sorted array and find the longest free time
   for(let j = 0; j < minArr.length - 1; j++) {
@@ -81,3 +84,5 @@ const MostFreeTime = (strArr) => {
 
 // 11.keep this function call here 
 console.log(MostFreeTime(strArr));
+
+//12. OutPut is 00:30
