@@ -8,7 +8,9 @@ and the latest event should be the latest event in the day.
 The output for the previous input would therefore be 01:30 
 (with the earliest event in the day starting at 09:10AM and the latest event ending at 02:45PM).
 The input will contain at least 3 events and the events may be out of order.*/
-  
+
+
+// This is correct solution and my solution is up to step: adding a leading zero for (single-digit minutes) and (single-digit) hours step  and  I was stuck at this step in not finished in interview.
   
   
   //1. declare strArr for testing purpose
@@ -18,16 +20,16 @@ const MostFreeTime = (strArr) => {
  
   // 2.create an empty array to store the minutes of each event
   let minArr = [];
-  // create a variable to keep track of the longest free time: initailly zero
+  // create the longest free time: initailly zero
   let longest = 0;
   
   // 3.function to convert a time string to minutes
   const  ParseTime = (time) => {
       let minutes = 0 
-      // add 12 hours (720 minutes) for pm times
+      // check for pm times
       // use regex string.mtach(regex) method
       if(time.match(/pm/i)) {  //The regular expression includes the i flag so that upper/lower case differences will be ignored.
-          minutes += 12 * 60  // if time is pm times. minutes = minutes + ( 12 * 6)
+          minutes += 12 * 60  // if time is pm times, minutes = minutes + ( 12 * 6)
       }
       // 4.add the hours converted to minutes
       if(time.split(':')[0] !== '12') { // 11:59AM.split(:)[0] and here [0] = 11  time =[11, 59]
@@ -40,7 +42,7 @@ const MostFreeTime = (strArr) => {
 
  
   
-  // 6.loop through the array of events and convert each time to minutes and add to minutes array
+  // 6.loop through the array of events, convert each time to minutes and add to minutes array
   for(let i = 0; i < strArr.length; i++) {
        time1 = strArr[i].split('-')[0] //"09:00AM-10:00AM"
        time2 = strArr[i].split('-')[1] // "10:30AM-12:00PM"
@@ -73,7 +75,7 @@ const MostFreeTime = (strArr) => {
   if(longest.toString().length === 1) {
       return hours + ":0" + longest    //00:01
   } else {
-      return hours + ":" + longest   //11:25
+      return hours + ":" + longest   //11:59
   }
 }
 
