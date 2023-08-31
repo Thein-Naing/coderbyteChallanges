@@ -10,7 +10,7 @@ The output for the previous input would therefore be 01:30
 The input will contain at least 3 events and the events may be out of order.*/
 
 
-// This is correct solution and my solution is up to step: adding a leading zero for (single-digit minutes) and (single-digit) hours step  and I was stuck at this step and not finished in interview.
+// This is correct solution and my solution is up to last step: adding a leading zero for (single-digit minutes) and (single-digit) hours step  and I was stuck at this step and not finished in interview.
   
   
   //1. declare strArr for testing purpose
