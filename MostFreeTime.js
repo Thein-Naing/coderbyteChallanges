@@ -30,7 +30,7 @@ const MostFreeTime = (strArr) => {
       let minutes = 0 
    
       // 3A.Calculate for PM hours
-      // 3B.use regex string.mtach(regex) method   
+      // 3B.use regex string.mtach(regex) method to check if time is pm/PM
       if(time.match(/pm/i)) {  //The regular expression includes the i flag so that upper/lower case differences will be ignored.
           minutes += 12 * 60  // if time is PM times, minutes = minutes + ( 12 * 6)
       }
