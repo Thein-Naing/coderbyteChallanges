@@ -35,7 +35,7 @@ const MostFreeTime = (strArr) => {
           minutes += 12 * 60  // if time is PM times, minutes = minutes + ( 12 * 6)
       }
       // 4. Calculate for AM hours and add the hours converted to minutes   
-      if(time.split(':')[0] !== '12') { // 11:59AM.split(:)[0] and here [0] = 11  time =[11, 59]
+      if(time.split(':')[0] !== '12') { // 11:59AM.split(':')[0] and here [0] = 11  time =[11, 59]
          minutes += time.split(':')[0] * 60  // so  minutes = 11 * 60
       }  
       // 5.Calculate for AM minutes and add the minutes.
@@ -71,19 +71,19 @@ const MostFreeTime = (strArr) => {
   
   // 9.convert the longest free time to hours and minutes
   let hours = 0
-  while(longest >= 60) {
+  while(longest >= 60) {  // use while loop
       longest -= 60;
       hours ++
   }
   
   // 10.add a leading zero for (single-digit minutes) and (single-digit) hours
   if(hours.toString().length === 1) {
-      hours = "0" + hours   //01:10
+      hours = "0" + hours   //e.g-01:00
   }
   if(longest.toString().length === 1) {
-      return hours + ":0" + longest    //00:01
+      return hours + ":0" + longest    //e.g-00:01
   } else {
-      return hours + ":" + longest   //11:59
+      return hours + ":" + longest   //e.g-11:59
   }
 }
 
