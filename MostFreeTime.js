@@ -31,11 +31,11 @@ const MostFreeTime = (strArr) => {
       if(time.match(/pm/i)) {  //The regular expression includes the i flag so that upper/lower case differences will be ignored.
           minutes += 12 * 60  // if time is pm times, minutes = minutes + ( 12 * 6)
       }
-      // 4.add the hours converted to minutes
+      // 4. Calculate for AM hours and add the hours converted to minutes
       if(time.split(':')[0] !== '12') { // 11:59AM.split(:)[0] and here [0] = 11  time =[11, 59]
          minutes += time.split(':')[0] * 60  // so  minutes = 11 * 60
       }  
-      // 5.add the minutes
+      // 5.Calculate for AM minutes and add the minutes . use regex string.mtach(regex) method
       minutes += Number(time.split(':')[1].match(/[0-9][0-9]/)[0]) // here [1] = 59 of time[11]
 
    //5A. return minutes
