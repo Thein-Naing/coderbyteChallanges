@@ -11,8 +11,8 @@ The input will contain at least 3 events and the events may be out of order.*/
 
 
 /* This is coding challangen from junior full stack developer role interview.
-This is correct solution and my solution is up to last step: adding a leading zero for (single-digit minutes) and 
-(single-digit) hours step and I was stuck at this step and not finished in interview. */`
+This is correct solution and my solution is up to last step: adding a leading zero for (single-digit minutes)
+and (single-digit) hours step and I was stuck at this step and not finished in interview. */
   
   
   //1. declare strArr for testing purpose
@@ -20,7 +20,7 @@ let  strArr = ["12:15PM-02:00PM", "09:00AM-10:00AM", "10:30AM-12:00PM" ];
 
 const MostFreeTime = (strArr) => { 
  
-  // 2.create an empty array to store the minutes of each event
+  // 2.create an empty array to store the minutes of each event 
   let minArr = [];
   // create the longest free time: initailly zero
   let longest = 0;
@@ -28,19 +28,21 @@ const MostFreeTime = (strArr) => {
   // 3.function to convert a time string to minutes
   const  ParseTime = (time) => {
       let minutes = 0 
-      // check for pm times
-      // use regex string.mtach(regex) method
+   
+      // 3A.Calculate for PM times
+      // 3B.use regex string.mtach(regex) method   
       if(time.match(/pm/i)) {  //The regular expression includes the i flag so that upper/lower case differences will be ignored.
           minutes += 12 * 60  // if time is pm times, minutes = minutes + ( 12 * 6)
       }
-      // 4. Calculate for AM hours and add the hours converted to minutes
+      // 4. Calculate for AM hours and add the hours converted to minutes   
       if(time.split(':')[0] !== '12') { // 11:59AM.split(:)[0] and here [0] = 11  time =[11, 59]
          minutes += time.split(':')[0] * 60  // so  minutes = 11 * 60
       }  
-      // 5.Calculate for AM minutes and add the minutes . use regex string.mtach(regex) method
+      // 5.Calculate for AM minutes and add the minutes.
+   //5A.use regex string.mtach(regex) method
       minutes += Number(time.split(':')[1].match(/[0-9][0-9]/)[0]) // here [1] = 59 of time[11]
 
-   //5A. return minutes
+   //5B. return minutes
       return minutes
   }
 
@@ -48,9 +50,10 @@ const MostFreeTime = (strArr) => {
   
   // 6.loop through the array of events, convert each time to minutes and add to minutes array
   for(let i = 0; i < strArr.length; i++) {
-       time1 = strArr[i].split('-')[0] //"09:00AM-10:00AM"
-       time2 = strArr[i].split('-')[1] // "10:30AM-12:00PM"
-      minArr.push([ParseTime(time1), ParseTime(time2)])
+       timeA = strArr[i].split('-')[0] //"09:00AM-10:00AM"
+       timeB = strArr[i].split('-')[1] // "10:30AM-12:00PM"
+   //6A. add times  to minutes array
+      minArr.push([ParseTime(timeA), ParseTime(timeB)]) 
   }    
   
   // 7.sort the array of minutes in ascending order
