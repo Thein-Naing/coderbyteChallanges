@@ -11,7 +11,10 @@ Output: 1
 Input: [10, 22, 9, 33, 21, 50, 41, 60, 22, 68, 90]
 Output: 7
 
-// This is not my solution. I think my solution in interview is a lot similar to below solution but my one is a naive solution and may be correct.
+/*This is not my solution. 
+ This is coding challenge from junior full stack developer role interview which I sat in Thursday (23.08.2023).
+I took about one and half hour to solve this challenge.
+I think my solution in interview is a lot similar to below solution but my one is a naive solution and correct but I forget to log the updateLIS as final step */
 
 
 // Dynamic Programming Javascript implementation of LIS problem
