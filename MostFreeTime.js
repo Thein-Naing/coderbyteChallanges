@@ -10,9 +10,10 @@ The output for the previous input would therefore be 01:30
 The input will contain at least 3 events and the events may be out of order.*/
 
 
-/* This is coding challangen from junior full stack developer role interview.
+/* This is coding challenge from junior full stack developer role interview which I sat in Thursday (23.08.2023).
 This is correct solution and my solution is up to last step: adding a leading zero for (single-digit minutes)
-and (single-digit) hours step and I was stuck at this step and not finished in interview. */
+and (single-digit) hours step and I was stuck at this step and not finished in interview. 
+I took about one hour to solve in interview.*/
   
   
   //1. declare strArr for testing purpose
