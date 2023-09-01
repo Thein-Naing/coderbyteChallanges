@@ -1,7 +1,7 @@
 # coderbyteChallanges
 `[Notes]`
 `These are challanges from some of my junior fullstack developer role interviews. I will update everytime I have to sit the coding assessment in interviews`
-![image](https://github.com/Thein-Naing/coderbyteChallanges/assets/117463446/5926ddd1-3ecb-462d-b23b-7f2ddeace7ac)
+
 
 
 `# React PhoneBook solution should be something like this below and this is rendered view from my code;`
